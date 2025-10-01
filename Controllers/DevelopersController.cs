@@ -9,18 +9,22 @@ namespace webApiDotNetTrainingGround.Controllers
     [ApiController]
     public class DevelopersController : ControllerBase
     {
-        private static List<Developer> _db = new List<Developer>();
+        private Db _db;
+        public DevelopersController()
+        {
+            _db = new Db();
+        }
 
         [HttpGet]
         public ActionResult<List<Developer>> GetAllDevelopers()
         {
-            return Ok(_db);
+            return Ok(_db.Developers);
         }
 
         [HttpGet("{id}")]
         public ActionResult<Developer> GetDeveloperById(int id)
         {
-            var developer = _db.FirstOrDefault(d => d.Id == id);
+            var developer = _db.Developers.FirstOrDefault(d => d.Id == id);
             if (developer == null)
             {
                 return NotFound();
@@ -31,8 +35,8 @@ namespace webApiDotNetTrainingGround.Controllers
         [HttpPost]
         public ActionResult<Developer> CreateDeveloper(Developer developer)
         {
-            developer.Id = _db.Count > 0 ? _db.Max(d => d.Id) + 1 : 1;
-            _db.Add(developer);
+            developer.Id = _db.Developers.Count > 0 ? _db.Developers.Max(d => d.Id) + 1 : 1;
+            _db.Developers.Add(developer);
             return CreatedAtAction(nameof(GetDeveloperById), new { id = developer.Id }, developer);
         }
     }
