@@ -1,9 +1,14 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace webApiDotNetTrainingGround.Models
 {
     public class CreateDeveloperRequest
     {
-        public string Name { get; set; }
-        public string Role { get; set; }
-        public int Experience { get; set; }
+        [Required]
+        public string? Name { get; set; }
+        [Required]
+        public string? Role { get; set; }
+        [Required]
+        public int? Experience { get; set; }
     }
 }
