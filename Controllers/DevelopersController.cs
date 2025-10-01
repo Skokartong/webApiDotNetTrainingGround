@@ -15,5 +15,11 @@ namespace webApiDotNetTrainingGround.Controllers
         {
             _db = new List<Developer>();
         }
+
+        [HttpGet]
+        public async Task<ActionResult<List<Developer>>> GetAllDevelopers()
+        {
+            return Ok(new List<Developer>(_db));
+        }
     }
 }

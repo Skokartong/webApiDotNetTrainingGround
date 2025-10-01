@@ -31,3 +31,4 @@ C:\Users\Amanda\salt\precourse\webApiDotNetTrainingGround\obj\Debug\net9.0\refin
 C:\Users\Amanda\salt\precourse\webApiDotNetTrainingGround\obj\Debug\net9.0\webApiDotNetTrainingGround.pdb
 C:\Users\Amanda\salt\precourse\webApiDotNetTrainingGround\obj\Debug\net9.0\webApiDotNetTrainingGround.genruntimeconfig.cache
 C:\Users\Amanda\salt\precourse\webApiDotNetTrainingGround\obj\Debug\net9.0\ref\webApiDotNetTrainingGround.dll
+C:\Users\Amanda\salt\precourse\webApiDotNetTrainingGround\obj\Debug\net9.0\webApiDotNetTrainingGround.sourcelink.json
