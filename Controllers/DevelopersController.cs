@@ -33,11 +33,17 @@ namespace webApiDotNetTrainingGround.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Developer> CreateDeveloper(Developer developer)
+        public ActionResult<Developer> CreateDeveloper(CreateDeveloperRequest request)
         {
-            developer.Id = _db.Developers.Count > 0 ? _db.Developers.Max(d => d.Id) + 1 : 1;
-            _db.Developers.Add(developer);
-            return CreatedAtAction(nameof(GetDeveloperById), new { id = developer.Id }, developer);
+            var newDeveloper = new Developer
+            {
+                Id = _db.Developers.Count + 1,
+                Name = request.Name,
+                Role = request.Role,
+                Experience = request.Experience
+            };
+            _db.Developers.Add(newDeveloper);
+            return CreatedAtAction(nameof(GetDeveloperById), new { id = newDeveloper.Id }, newDeveloper);
         }
     }
 }
