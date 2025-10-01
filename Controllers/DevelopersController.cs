@@ -17,9 +17,20 @@ namespace webApiDotNetTrainingGround.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Developer>>> GetAllDevelopers()
+        public ActionResult<List<Developer>> GetAllDevelopers()
         {
-            return Ok(new List<Developer>(_db));
+            return Ok(_db);
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Developer> GetDeveloperById(int id)
+        {
+            var developer = _db.FirstOrDefault(d => d.Id == id);
+            if (developer == null)
+            {
+                return NotFound();
+            }
+            return Ok(developer);
         }
     }
 }

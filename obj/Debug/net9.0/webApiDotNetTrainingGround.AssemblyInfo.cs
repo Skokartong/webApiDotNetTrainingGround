@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("webApiDotNetTrainingGround")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba654ff7c223a2211f5e6fa182cf21e114e11169")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d6da3005b5ddf56d816eb10766a9fc7b0fa412d")]
 [assembly: System.Reflection.AssemblyProductAttribute("webApiDotNetTrainingGround")]
 [assembly: System.Reflection.AssemblyTitleAttribute("webApiDotNetTrainingGround")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
